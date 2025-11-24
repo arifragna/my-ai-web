@@ -1,0 +1,397 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future of Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <h2>AI<span style="color:#00d2ff">.</span>LAB</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#" class="active">EDUCATION</a></li>
+            <li><a href="#">MY FRIEND AI</a></li>
+            <li><a href="#">SCIENCE BOX</a></li>
+            <li><a href="#">PERSPECTIVE</a></li>
+            <li><a href="#">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <main class="hero-section">
+        <div class="hero-visual">
+            <div class="glowing-circle"></div>
+            <img src="robot-art.png" alt="Futuristic AI Art" class="main-art">
+        </div>
+
+        <div class="hero-content">
+            <h1>FUTURE OF <br> <span>INTELLIGENCE</span></h1>
+            <p>Transforming Industries <br> with Cutting-Edge AI Solutions</p>
+            <button class="btn-glow">LEARN MORE</button>
+        </div>
+    </main>
+
+    <div class="bottom-panel">
+        <div class="icon-box">
+            <div class="icon">📍</div>
+            <span>LOCATION</span>
+        </div>
+        <div class="icon-box">
+            <div class="icon">💡</div>
+            <span>IDEAS</span>
+        </div>
+        <div class="icon-box active-icon">
+            <div class="icon">🤖</div>
+            <span>AUTOMATION</span>
+        </div>
+        <div class="icon-box">
+            <div class="icon">💬</div>
+            <span>CHAT</span>
+        </div>
+        <div class="icon-box">
+            <div class="icon">🔗</div>
+            <span>CONNECT</span>
+        </div>
+    </div><div class="bottom-panel">
+  <div class="icon-box" onclick="openTab(event, 'tab1')">
+    <div class="icon">📍</div>
+    <span>LOCATION</span>
+  </div>
+  <div class="icon-box" onclick="openTab(event, 'tab2')">
+    <div class="icon">💡</div>
+    <span>IDEAS</span>
+  </div>
+  <div class="icon-box active-icon" onclick="openTab(event, 'tab3')">
+    <div class="icon">🤖</div>
+    <span>AUTOMATION</span>
+  </div>
+  <div class="icon-box" onclick="openTab(event, 'tab4')">
+    <div class="icon">💬</div>
+    <span>CHAT</span>
+  </div>
+  <div class="icon-box" onclick="openTab(event, 'tab5')">
+    <div class="icon">🔗</div>
+    <span>CONNECT</span>
+  </div>
+
+<div id="tab1" class="tabcontent">
+  <h3>LOCATION</h3>
+  <p>LOCATION এর কন্টেন্ট</p>
+</div>
+
+<div id="tab2" class="tabcontent" style="display: none;">
+  <h3>IDEAS</h3>
+  <p>IDEAS এর কন্টেন্ট</p>
+</div>
+
+<div id="tab3" class="tabcontent">
+  <h3>AUTOMATION</h3>
+  <p>AUTOMATION এর কন্টেন্ট</p>
+</div>
+
+<div id="tab4" class="tabcontent" style="display: none;">
+  <h3>CHAT</h3>
+  <p>CHAT এর কন্টেন্ট</p>
+</div>
+
+<div id="tab5" class="tabcontent" style="display: none;">
+  <h3>CONNECT</h3>
+  <p>CONNECT এর কন্টেন্ট</p>
+</div>
+
+</body>
+</html>
+<style>/* General Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, #1a2a40 0%, #050505 100%);
+    color: white;
+    height: 100vh;
+    overflow: hidden; /* স্ক্রল বন্ধ রাখা হয়েছে যাতে পুরো পেজ এক স্ক্রিনে দেখা যায় */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo h2 {
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+    color: #00d2ff;
+    text-shadow: 0 0 10px #00d2ff;
+    border-bottom: 2px solid #00d2ff;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 5%;
+}
+
+.hero-visual {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.glowing-circle {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: rgba(0, 210, 255, 0.15);
+    filter: blur(60px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.main-art {
+    width: 80%;
+    max-width: 400px;
+    /* ছবি না থাকলে এটা ফাঁকা দেখাবে, তাই একটা ছবি ফোল্ডারে রেখো */
+}
+
+.hero-content {
+    width: 40%;
+    text-align: right;
+}
+
+.hero-content h1 {
+    font-size: 65px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.hero-content h1 span {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff; /* টেক্সট আউটলাইন ইফেক্ট */
+}
+
+.hero-content p {
+    margin-top: 15px;
+    color: #aaa;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.btn-glow {
+    margin-top: 25px;
+    padding: 10px 35px;
+    background: #00d2ff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.5);
+    transition: 0.3s;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 210, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Bottom Icons Panel */
+.bottom-panel {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+/* Connecting Line */
+.bottom-panel::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 25%;
+    right: 25%;
+    height: 1px;
+    background: rgba(0, 210, 255, 0.3);
+    z-index: 0;
+}
+
+.icon-box {
+    text-align: center;
+    color: #00d2ff;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #00d2ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050505;
+    font-size: 22px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.icon-box span {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.icon-box:hover .icon, .active-icon .icon {
+    background: rgba(0, 210, 255, 0.2);
+    box-shadow: 0 0 15px #00d2ff;
+}
+</style><script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future of Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <h2>AI<span style="color:#00d2ff">.</span>LAB</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#" class="active">EDUCATION</a></li>
+            <li><a href="#">MY FRIEND AI</a></li>
+            <li><a href="#">SCIENCE BOX</a></li>
+            <li><a href="#">PERSPECTIVE</a></li>
+            <li><a href="#">ABOUT US</a></li>
+        </ul>
+    </nav>
+
+    <main class="hero-section">
+        <div class="hero-visual">
+            <div class="glowing-circle"></div>
+            <img src="robot-art.png" alt="Futuristic AI Art" class="main-art">
+        </div>
+
+        <div class="hero-content">
+            <h1>FUTURE OF <br> <span>INTELLIGENCE</span></h1>
+            <p>Transforming Industries <br> with Cutting-Edge AI Solutions</p>
+            <button class="btn-glow">LEARN MORE</button>
+        </div>
+    </main>
+
+    <div class="bottom-panel">
+        <div class="icon-box">
+            <div class="icon">📍</div>
+            <span>LOCATION</span>
+        </div>
+        <div class="icon-box">
+            <div class="icon">💡</div>
+            <span>IDEAS</span>
+        </div>
+        <div class="icon-box active-icon">
+            <div class="icon">🤖</div>
+            <span>AUTOMATION</span>
+        </div>
+        <div class="icon-box">
+            <div class="icon">💬</div>
+            <span>CHAT</span>
+        </div>
+        <div class="icon-box">
+            <div class="icon">🔗</div>
+            <span>CONNECT</span>
+        </div>
+    </div><div class="bottom-panel">
+  <div class="icon-box" onclick="openTab(event, 'tab1')">
+    <div class="icon">📍</div>
+    <span>LOCATION</span>
+  </div>
+  <div class="icon-box" onclick="openTab(event, 'tab2')">
+    <div class="icon">💡</div>
+    <span>IDEAS</span>
+  </div>
+  <div class="icon-box active-icon" onclick="openTab(event, 'tab3')">
+    <div class="icon">🤖</div>
+    <span>AUTOMATION</span>
+  </div>
+  <div class="icon-box" onclick="openTab(event, 'tab4')">
+    <div class="icon">💬</div>
+    <span>CHAT</span>
+  </div>
+  <div class="icon-box" onclick="openTab(event, 'tab5')">
+    <div class="icon">🔗</div>
+    <span>CONNECT</span>
+  </div>
+</div>
+
+<div id="tab1" class="tabcontent">
+  <h3>LOCATION</h3>
+  <p>LOCATION এর কন্টেন্ট</p>
+</div>
+
+<div id="tab2" class="tabcontent" style="display: none;">
+  <h3>IDEAS</h3>
+  <p>IDEAS এর কন্টেন্ট</p>
+</div>
+
+<div id="tab3" class="tabcontent">
+  <h3>AUTOMATION</h3>
+  <p>AUTOMATION এর কন্টেন্ট</p>
+</div>
+
+<div id="tab4" class="tabcontent" style="display: none;">
+  <h3>CHAT</h3>
+  <p>CHAT এর কন্টেন্ট</p>
+</div>
+
+<div id="tab5" class="tabcontent" style="display: none;">
+  <h3>CONNECT</h3>
+  <p>CONNECT এর কন্টেন্ট</p>
+</div>
+
+</body>
+</html>
+</script>
